@@ -1,6 +1,6 @@
 # Google Software Product Sprint
 
-This repo contains the projects you'll work on throughout SPS.
+This repo contains Kizito's portfolio and SPS projects for 2021 summer.
 
 To get started:
 
