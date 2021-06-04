@@ -1,19 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Kizito's portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-  </head>
-  <body>
+
+</head>
+
+<body>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+        <div hidden>header</div>
+        <div class="flex-body">
+            <div class="side-bar">
+                <img src="images/AtWork.jpg" id="sidebar-picture">
+                <h1>KIZITO AKWOTIGA</h1>
+                <p>FULL STACK SOFTWARE DEVELOPER </p>
+                <b>&</b>
+                <p>COMPUTER ENGINEER</p>
+                <a href="#">ABOUT ME</a>
+                <a href="#">RESUME</a>
+                <a href="#">GET IN TOUCH</a>
+                <button onclick="addRandomGreeting()">FUN FACTS </button>
+            </div>
+            <div class=content-main>
+                <div class="flexWrap-container-reg">
+                    <h2>
+                        <br>Kizito Akwotiga</br>
+                        <br>Computer Enginering Student</br>
+                        <address>kakwotiga@gmail.com</address>
+                    </h2>
+                    <img class="profile-picture" src="images/AtWork.jpg">
+                </div>
+                <div class="flexWrap-container-reg">
+                    I am Kizito Akwotiga, a second year computer engineering student at City University of New York-QCC,
+                    very much interested in software development and looking forward to bulding things for the web.
+                    I find electrical circuits satisfying which led me to pursueing a degree in Engineering.
+                    This is my very first portfolio and hopefully it will get better before SPS comes to an end.
+                </div>
+                <div class="flexWrap-container-reg">
+                    I have worked with a group of software developers to create an E-Commerce website. As a participant,
+                    I sole handedly worked on the GUI of the login page and loved the outcome. You may visit the <a
+                        href="https://github.com/ayamkito/qcc-shopper.git">repository </a> and leave any feed back.
+                </div>
+                <div class="flexWrap-container-reg" id="social">
+                    You may connect with me on professional/social media:
+                    <a href="https://github.com/ayamkito">github</a>
+                    <a href="https://www.linkedin.com/in/ayamkito/">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                </div>
+                <div class="flexWrap-container-reg">
+                    <div class="gallery">
+                        <div>
+                            <button onclick="prevImage"> << </button>
+                            <img src="https://globalgrasshopper.com/wp-content/uploads/2010/03/Kruger-National-Park-1000x664.jpg"
+                                id="gallery">
+                            <button onclick="nextImage"> >> </button>
+                        </div>
+                        <p>The heart of Africa lies in it's people and it's wild life.</p>
+                    </div>
+                </div>
+                <div class="flexWrap-container-reg">
+                    As this portfolio gets better, I will dedicate this space for the stories of the wild.
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- <p>Click <a href="/hello">here</a> to see content created by server code.</p>
+        <p>Click here to get a random message:</p>
+        <button onclick="addRandomGreeting()">Hello</button>
+        <div id="greeting-container"></div> -->
+
+
+
+        <div hidden>footer</div>
     </div>
-  </body>
+</body>
+
 </html>
