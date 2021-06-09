@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Kizito's portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 
 </head>
 
@@ -23,7 +23,7 @@
                     <a href="#" class="side-menu">ABOUT ME</a>
                     <a href="#" class="side-menu">RESUME</a>
                     <a href="#" class="side-menu">GET IN TOUCH</a>
-                    <button onclick="addRandomGreeting()" class="side-menu button">FUN FACTS </button>
+                    <button onclick="document.location='/funfacts'" class="side-menu button">FUN FACTS </button>
                 </div>
                 <div class=main-body>
                     <div class="mini-container brief">
@@ -68,6 +68,10 @@
                     </div>
                     <div class="mini-container">
                         As this portfolio gets better, I will dedicate this space for the stories of the wild.
+                    </div>
+                    <div class="mini-container">
+                        <button onclick="displayFacts();">Interesting Facts</button>
+                        <p id="funFacts"> </p>
                     </div>
                 </div>
             </div>
