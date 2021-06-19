@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script2.js"></script>
+
+</head>
+
+<body onload="contactInfo();">
+    <form method="POST" action="/contact-me" >
+        <div>
+            <label for="name">Your name: </label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div >
+            <label for="email">Your email: </label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div >
+            <button>Submit</button>
+        </div>
+    </form>
+    <p id="contact"></p>
+
+</body>  
