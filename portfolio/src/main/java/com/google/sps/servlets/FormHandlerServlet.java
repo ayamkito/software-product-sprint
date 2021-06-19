@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Whitelist;
 
-/** Servlet responsible for creating new tasks. */
+/** Servlet responsible for handling input from contact me form */ 
 @WebServlet("/contact-me")
 public class FormHandlerServlet extends HttpServlet {
 
@@ -24,14 +24,14 @@ public class FormHandlerServlet extends HttpServlet {
     String email = Jsoup.clean(request.getParameter("email"), Whitelist.none());
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
-    FullEntity taskEntity =
+    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Contacts");
+    FullEntity contactEntity =
         Entity.newBuilder(keyFactory.newKey())
             .set("name", name)
             .set("email", email)
             .build();
-    datastore.put(taskEntity);
+    datastore.put(contactEntity);
 
-    response.sendRedirect("/index.html");
+    response.sendRedirect("/contactMe.html");
   }
-}
+} 
