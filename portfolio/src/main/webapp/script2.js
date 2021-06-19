@@ -13,39 +13,46 @@ async function displayFacts() {
 
 //This function is meant to throw back at the user, only the date they entered.
 // However, it is not yet polished as such. I am close to getting it but not yet.
-async function contactInfo(){
+async function contactInfo() {
     const datastoreRequest = await fetch("/contact-list");
     const datastoreResponse = await datastoreRequest.json();
     const contactContainer = document.getElementById("contact");
 
-    contactContainer.innerText = "Information You Submitted" +"\n\n" + datastoreResponse[0]["name"] +"\n"+ datastoreResponse[0]["email"];
+    contactContainer.innerText = "Information You Submitted" + "\n\n" + datastoreResponse[0]["name"] + "\n" + datastoreResponse[0]["email"];
     console.log(datastoreResponse[0]);
 }
 
 // Create a page that list all that i have in my contact database
-async function allDatabaseData(){
+async function allDatabaseData() {
     fetch('/contact-list').then(response => response.json()).then((contact) => {
-    const listContactsElement = document.getElementById('all-database-data');
-    contact.forEach((contact) => {
-      listContactsElement.appendChild(createContactElement(contact));
-    })
-  });
+        const listContactsElement = document.getElementById('all-database-data');
+        contact.forEach((contact) => {
+            listContactsElement.appendChild(createContactElement(contact));
+        })
+    });
 
 }
 
 /** html elements for name and email*/
 function createContactElement(contact) {
-  const contactElement = document.createElement('div');
-  contactElement.className = 'contact';
+    const contactElement = document.createElement('div');
+    contactElement.className = 'contact';
 
-  const nameElement = document.createElement('div');
-  nameElement.innerText = contact.name;
+    const nameElement = document.createElement('div');
+    nameElement.innerText = contact.name;
 
-  const emailElement = document.createElement('address');
-  emailElement.innerText = contact.email;
+    const emailElement = document.createElement('address');
+    emailElement.innerText = hashEmail(contact.email);
 
-  contactElement.appendChild(nameElement);
-  contactElement.appendChild(emailElement);
-  return contactElement;
-  console.log(contactElement);
+    contactElement.appendChild(nameElement);
+    contactElement.appendChild(emailElement);
+    return contactElement;
+    console.log(contactElement);
+}
+// Hide part of email to keep it secure.
+function hashEmail(email) {
+    email.replace()
+    const indexOfAt = email.indexOf("@") - 2;
+    const hashEmail = email.replace(email.substr(1, indexOfAt), "***");
+    return hashEmail;
 }
