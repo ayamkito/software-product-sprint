@@ -66,16 +66,20 @@
     justify-content: space-around;
 }
 
-/* #greeting-container {
-  margin-top: 20px;
+/* CSS for contactMeDatastore.html */
+.top-title{
+    display: flex;
+    justify-content: center;
 }
-
- 
-#gallery{
-    width: 500px;
-    padding: 10px;
-    top: 50%;
-    left: 50%;
+.table-head{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(175, 179, 194);
+}
+.contact{
     display:flex;
+    justify-content: space-between;
+    padding: 2px 0 10px 0;
+    border: dashed;
 }
- */
+/* End of CSS for contactMeDatastore.html */
